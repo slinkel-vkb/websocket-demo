@@ -1,0 +1,10 @@
+.greeting {
+  font-style: italic;
+}
+.error {
+  color: #ff0000;
+}
+.from {
+  font-style: italic;
+  color: #555;
+}

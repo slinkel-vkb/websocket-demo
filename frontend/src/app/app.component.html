@@ -1,0 +1,10 @@
+<ng-container *ngIf="nameOutput === ''">
+  <label for="name">Username:</label>
+  <input type="text" [(ngModel)]="nameInput" id="name"/>
+  <button (click)="login()" [disabled]="nameInput === ''">Go</button>
+</ng-container>
+
+<ng-container *ngIf="nameOutput !== ''">
+  <app-chat [name]="nameOutput"></app-chat>
+  <button class="close" (click)="nameOutput = ''">Close</button>
+</ng-container>

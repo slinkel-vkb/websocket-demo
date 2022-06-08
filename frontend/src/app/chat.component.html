@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="text"/>
+<button (click)="shout()" [disabled]="text === ''">send</button>
+
+<div *ngFor="let message of messages" [class]="message.type">
+  <span class="from" *ngIf="(message | messageType) as msg">
+    {{msg.from}}:
+  </span>
+  {{message.message}}
+</div>
